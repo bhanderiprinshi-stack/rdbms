@@ -1,0 +1,14 @@
+CREATE TABLE `customer` (
+  `cust_id` int(11) NOT NULL,
+  `cust_name` varchar(100) NOT NULL,
+  `cust_email` varchar(255) DEFAULT NULL,
+  `contact_no` varchar(15) NOT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `join_date` date NOT NULL
+  );
+INSERT INTO `customer` (`cust_id`, `cust_name`, `cust_email`, `contact_no`, `country`, `join_date`) VALUES
+(201, 'alice', 'alice@example.com', '9876543210', 'usa', '2022-01-15'),
+(202, 'bob', 'bob@example.com', '9988776655', 'UK', '2021-11-20'),
+(203, 'charlie', 'charlie@example.com', '9123456780', 'canada', '2020-09-10'),
+(204, 'diana', 'diana@example.com', '9876501234', 'australia', '2023-03-25'),
+(205, 'eve', 'eve@example.com', '9988001122', 'india', '2021-06-05');
