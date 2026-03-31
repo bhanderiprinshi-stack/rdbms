@@ -1,0 +1,22 @@
+#sub query
+select * from employee
+select name,department,salary from employee where salary=(select min(salary)from employee)
+select * from employee where salary>(select avg(salary)from employee)
+select * from employee where department=(select department from employee where name='jay')
+select * from employee where department IN(select department from employee where name='jay')
+select * from employee where salary>ANY(select salary from employee where department='HR')
+select * from employee where salary>All(select salary from employee where department='HR')
+select * from employee
+select * from employee where salary>All(select salary from employee where department='HR')
+​
+#dcl command(grant,revoke)
+	grant
+ex:1 grant select on emp to user1;
+ex:2 grant select,insert,update,delete on emp to user1;
+ex:3 grant all on emp to user1;
+
+	revoke
+ex:1 grant select on emp from user1;
+ex:2 grant select,insert,update,delete on emp from user1;
+ex:3 grant all on emp from user1;
+
