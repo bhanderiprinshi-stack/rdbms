@@ -1,0 +1,8 @@
+create table `department info`
+(
+dept_no int primary key,
+dept_name varchar(30) not null,
+location varchar(50),
+total_employees int,
+manager_name varchar(30)
+);
