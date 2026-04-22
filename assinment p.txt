@@ -1,0 +1,20 @@
+create table employee
+(
+emp_no int primary key,
+e_name varchar(70) not null,
+e_address varchar(80) not null,
+dept_no int not null,
+dept_name varchar(50),
+job_id int unique not null,
+salary int not null
+ );
+ *insert all row
+ SELECT * FROM `employee`
+desc employee;
+select * from employee;
+insert into employee(emp_no,e_name,e_address,dept_no,dept_name,job_id,salary)values(103,'charlie','789 pine road',3,'IT','3c',70000);
+select * from employee;
+insert into employee(emp_no,e_name,e_address,dept_no,dept_name,job_id,salary)values(104,'diana','321 maple lane',4,'HR','4d',55000);
+select * from employee;
+insert into employee(emp_no,e_name,e_address,dept_no,dept_name,job_id,salary)values(105,'eve','654 cedar drive',5,'marketing','5e',45000)
+select * from employee;
