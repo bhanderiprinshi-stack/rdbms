@@ -1,0 +1,8 @@
+create table student 
+(
+sid int primary key,
+sname varchar(50),
+age int not null,
+dob date,
+email varchar(50) not null unique
+);
