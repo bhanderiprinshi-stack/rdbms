@@ -1,0 +1,29 @@
+create table products( product_id int primary key, product_name varchar(50) not null, category varchar(70), price int not null, quantity int, order_date date );
+desc products;
+insert into products(product_id,product_name,category,price,quantity,order_date)values(p1,'smart phone','electronics',7000,10,'2023-may-10');
+insert into products(product_id,product_name,category,price,quantity,order_date)values(1,'smart phone','electronics',7000,10,'2023-may-10');
+select * from products;
+insert into products(product_id,product_name,category,price,quantity,order_date)values(2,'laptop','electronics',12000,15,'2023-11-11'),(3,'coffe maker','appliances',8000,05,'2023-03-25'),(4,'chair','furniture',6000,35,'2023-06-20'),(5,'wireless mouse','electronics',2000,20,'2023-01-05'),(6,'gaming monitor','electronics',3500,45,'2023-02-09');
+select * from products;
+insert into products(product_id,product_name,category,price,quantity,order_date)values(1,'smart phone','electronics',7000,10,'2023-05-10');
+select * from products;
+
+#####all query below this#####
+
+select * from products;
+select * from products where category='electronics';
+select * from products where price>5000;
+select * from products where order_date>'2023-01-01';
+select * from products where quantity < 15;
+select * from products order by price asc;
+select * from products where product_name like 'c%';
+select * from products where category='electronics' or category='furniture';
+select * from products order by quantity asc;
+select * from products order by quantity desc;
+select product_id,product_name,(quantity*2) AS double_quantity from products;
+select * from products where price between 3000 and 8000;
+select sum(quantity) AS total_product from products;
+select category,sum(quantity) AS category_total from products group by category;
+select category,avg(price) AS avarege_total from products group by category;
+select * from products where price>(select price from products where product_name='gaming monitor');
+?
